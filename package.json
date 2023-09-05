@@ -20,6 +20,13 @@
     "eject": "react-scripts eject",
     "server": "json-server --watch data/db.json --port 5000"
   },
+"vercel": {
+  "builds": [{ "src": "public/**", "use": "@vercel/static" }],
+  "routes": [
+    { "src": "/api/.*", "dest": "/api/index.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+},
   "eslintConfig": {
     "extends": [
       "react-app",

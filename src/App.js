@@ -7,7 +7,7 @@ const API = "http://localhost:5000"
 function App() {
 
   const [title, setTitle] = useState("");
-  const [time, setTime] = useState("");
+  const [setTime] = useState("");
   const [listas, setListas] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -49,7 +49,6 @@ function App() {
     setListas((prevState) => [...prevState, lista]);
 
     setTitle("");
-    setTime("");
   };
 
   const handleDelete = async(id) => {
